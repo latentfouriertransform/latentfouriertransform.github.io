@@ -262,7 +262,7 @@
 
               <div class="is-size-5 publication-authors">
                 <!-- TODO: Replace with your institution and conference/journal info -->
-                <span class="author-block">Anonymous Institution<br>ICLR 2026 In Submission</span>
+                <span class="author-block">Anonymous Institution<br>ICLR 2026, In Submission</span>
               </div>
 
               <div class="column has-text-centered">
@@ -318,7 +318,7 @@
 
 
     <!-- Teaser video-->
-    <!-- <section class="hero teaser">
+    <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
           <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
@@ -330,7 +330,7 @@
           </h2>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- End teaser video -->
 
     <!-- Paper abstract -->
@@ -340,7 +340,6 @@
           <div class="column is-four-fifths">
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
-              <!-- TODO: Replace with your paper abstract -->
               <p>
                 We introduce the Latent Fourier Transform (LatentFT), a framework that provides novel frequency-domain
                 controls for generative audio models. LatentFT combines a diffusion autoencoder with a latent-space
@@ -362,6 +361,47 @@
       </div>
     </section>
     <!-- End paper abstract -->
+
+    <!-- Methods Diagram -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method</h2>
+            <img src="static/images/method.svg" alt="Method Diagram" />
+            <div class="content has-text-justified">
+              <p>
+                The <strong>Latent Fourier Transform</strong>. We encode audio into a series of latent vectors and take
+                their Fourier
+                transform, resulting in a <em>latent spectrum</em>.
+                During training <span style="color: #B12421">(red)</span> , this spectrum is masked randomly and used
+                to reconstruct the input. During inference <span style="color:#15007E">(blue)</span>, the user specifies a spectral mask, which selects
+                features from the input at specific timescales and conditions a generative process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h3 class="title is-3">Conditional Generation</h3>
+            <div class="content has-text-justified">
+              <p>
+                We show several qualitative examples for <strong>conditional generation</strong>. First, we play the
+                input music clip:
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
 
 
     <!-- Image carousel -->
@@ -499,8 +539,9 @@
             <div class="content">
               <p>
                 This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                  target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                  target="_blank">Academic Project Page Template</a>.
+                <!-- which was adopted from the <a
+                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. -->
               </p>
             </div>
           </div>
