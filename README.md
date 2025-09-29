@@ -18,6 +18,5 @@ The template includes meta tags for better search engine visibility and social m
 Create a 1200x630px social preview image at `static/images/social_preview.png`.
 
 ## Tips
-
 - Compress images with [TinyPNG](https://tinypng.com)
 - Use YouTube for large videos (>10MB)
