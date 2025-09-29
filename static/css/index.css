@@ -103,8 +103,12 @@ body {
   padding: 4rem 1.5rem;
 }
 
+.hero:first-of-type .hero-body {
+  padding-bottom:1.5rem;
+}
+
 .teaser .hero-body {
-  padding-top: 2rem;
+  padding-top: 0rem;
   padding-bottom: 4rem;
 }
 
