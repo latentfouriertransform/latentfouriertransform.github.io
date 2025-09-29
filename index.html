@@ -342,11 +342,19 @@
             <div class="content has-text-justified">
               <!-- TODO: Replace with your paper abstract -->
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam
-                tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue,
-                a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac
-                gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed
-                vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+                We introduce the Latent Fourier Transform (LatentFT), a framework that provides novel frequency-domain
+                controls for generative audio models. LatentFT combines a diffusion autoencoder with a latent-space
+                Fourier transform to separate musical patterns by timescale. By masking in the latent frequency domain
+                during training, our method yields representations that can be manipulated coherently at inference. This
+                allows us to generate musical variations and blends from reference examples while preserving
+                characteristics at user-specified timescales. LatentFT parallels the role of the equalizer in audio
+                production: while traditional equalizers operates on audible frequencies to shape timbre, LatentFT
+                operates on latent frequencies to shape musical structure. Experiments and listening tests show that
+                LatentFT improves condition adherence and quality compared to baselines. We also present a technique for
+                hearing latent frequencies in isolation, and show different musical attributes reside in different
+                regions of the latent spectrum. Our results show how frequency-domain control in latent space provides
+                an intuitive, continuous frequency axis for conditioning and blending, advancing us toward more
+                interpretable and interactive generative audio models.
               </p>
             </div>
           </div>
@@ -357,34 +365,29 @@
 
 
     <!-- Image carousel -->
-    <section class="hero is-small">
+    <!-- <section class="hero is-small">
       <div class="hero-body">
         <div class="container">
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item">
-              <!-- TODO: Replace with your research result images -->
               <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy" />
-              <!-- TODO: Replace with description of this result -->
               <h2 class="subtitle has-text-centered">
                 First image description.
               </h2>
             </div>
             <div class="item">
-              <!-- Your image here -->
               <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy" />
               <h2 class="subtitle has-text-centered">
                 Second image description.
               </h2>
             </div>
             <div class="item">
-              <!-- Your image here -->
               <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy" />
               <h2 class="subtitle has-text-centered">
                 Third image description.
               </h2>
             </div>
             <div class="item">
-              <!-- Your image here -->
               <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy" />
               <h2 class="subtitle has-text-centered">
                 Fourth image description.
@@ -393,23 +396,21 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- End image carousel -->
 
 
 
 
     <!-- Youtube video -->
-    <section class="hero is-small is-light">
+    <!-- <section class="hero is-small is-light">
       <div class="hero-body">
         <div class="container">
-          <!-- Paper video. -->
           <h2 class="title is-3">Video Presentation</h2>
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
 
               <div class="publication-video">
-                <!-- TODO: Replace with your YouTube video ID -->
                 <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0"
                   allow="autoplay; encrypted-media" allowfullscreen></iframe>
               </div>
@@ -417,41 +418,35 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- End youtube video -->
 
 
     <!-- Video carousel -->
-    <section class="hero is-small">
+    <!-- <section class="hero is-small">
       <div class="hero-body">
         <div class="container">
           <h2 class="title is-3">Another Carousel</h2>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item item-video1">
-              <!-- TODO: Add poster image for better preview -->
               <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
                 <source src="static/videos/carousel1.mp4" type="video/mp4">
               </video>
             </div>
             <div class="item item-video2">
-              <!-- TODO: Add poster image for better preview -->
               <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
                 <source src="static/videos/carousel2.mp4" type="video/mp4">
               </video>
             </div>
             <div class="item item-video3">
-              <!-- TODO: Add poster image for better preview -->
               <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-                <!-- Your video file here -->
                 <source src="static/videos/carousel3.mp4" type="video/mp4">
               </video>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- End video carousel -->
 
 
@@ -460,24 +455,23 @@
 
 
     <!-- Paper poster -->
-    <section class="hero is-small is-light">
+    <!-- <section class="hero is-small is-light">
       <div class="hero-body">
         <div class="container">
           <h2 class="title">Poster</h2>
 
-          <!-- TODO: Replace with your poster PDF -->
           <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
 
         </div>
       </div>
-    </section>
+    </section> -->
     <!--End paper poster -->
 
 
 
     <!--BibTex citation -->
-    <section class="section" id="BibTeX">
+    <!-- <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <div class="bibtex-header">
           <h2 class="title">BibTeX</h2>
@@ -494,7 +488,7 @@
   url={https://your-domain.com/your-project-page}
 }</code></pre>
       </div>
-    </section>
+    </section> -->
     <!--End BibTex citation -->
 
 
@@ -503,29 +497,16 @@
         <div class="columns is-centered">
           <div class="column is-8">
             <div class="content">
-
               <p>
                 This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
                   target="_blank">Academic Project Page Template</a> which was adopted from the <a
                   href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-                You are free to borrow the source code of this website, we just ask that you link back to this page in
-                the footer. <br> This website is licensed under a <a rel="license"
-                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-                  Commons Attribution-ShareAlike 4.0 International License</a>.
               </p>
-
             </div>
           </div>
         </div>
       </div>
     </footer>
-
-    <!-- Statcounter tracking code -->
-
-    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
 </body>
 
 </html>
