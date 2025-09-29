@@ -5,7 +5,7 @@
   --secondary-color: #64748b;
   --accent-color: #0ea5e9;
   --text-primary: #1e293b;
-  --text-secondary: #64748b;
+  --text-secondary: #3F4957;
   --text-light: #94a3b8;
   --background-primary: #ffffff;
   --background-secondary: #f8fafc;
@@ -332,7 +332,7 @@ body {
 
 /* Content Improvements */
 .content.has-text-justified {
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   line-height: 1.8;
   color: var(--text-secondary);
 }
