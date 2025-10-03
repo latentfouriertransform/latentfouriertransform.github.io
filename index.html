@@ -322,11 +322,13 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <video poster="" id="teaser" autoplay controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/teaser.mp4" type="video/mp4">
+            <source src="static/videos/1-Teaser/teaser.mp4" type="video/mp4">
           </video>
           <div class="content has-text-justified">
             <p>
-              Generating Variations. We show an input music clip, then <strong>isolate</strong> and hear characterstics between 0 and 0.25 Hz (which captures primarily the chord progression). We use this content to <strong>generate</strong> 3 variations of our input.
+              Generating Variations. We show an input music clip, then <strong>isolate</strong> and hear characterstics
+              between 0 and 0.25 Hz (which captures primarily the chord progression). We use this content to
+              <strong>generate</strong> 3 variations of our input.
             </p>
           </div>
           <h2 class=" has-text-centered">
@@ -378,7 +380,8 @@
                 their Fourier
                 transform, resulting in a <em>latent spectrum</em>.
                 During training <span style="color: #B12421">(red)</span> , this spectrum is masked randomly and used
-                to reconstruct the input. During inference <span style="color:#15007E">(blue)</span>, the user specifies a spectral mask, which selects
+                to reconstruct the input. During inference <span style="color:#15007E">(blue)</span>, the user specifies
+                a spectral mask, which selects
                 features from the input at specific timescales and conditions a generative process.
               </p>
             </div>
@@ -392,14 +395,143 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h3 class="title is-3">Conditional Generation</h3>
+            <h4 class="title is-4">Instructive Example</h4>
             <div class="content has-text-justified">
               <p>
-                We show several qualitative examples for <strong>conditional generation</strong>. First, we play the
-                input music clip:
+                We show several qualitative examples for <strong>conditional generation</strong>. Our goal is to
+                generate variations that are diverse and musically interesting, while resembling the input music at the
+                selected temporal scale (latent frequency). First, we play the input music clip:
               </p>
-              <video poster="" id="cond_input_1" controls loop height="100%" preload="metadata">
-                <source src="static/videos/teaser.mp4" type="video/mp4">
-              </video>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-two-thirds">
+                <video poster="" id="2a_input" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/a/2a_input.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                Now, we <strong>zoom in on</strong> on a rhythmic pattern in the music between 9 - 9.5 Hz, to capture a
+                prominent drum pattern. Note that we are looking at variations between 9 and 9.5 Hz in the
+                <strong>latent</strong> encoding of the music, since variations in the waveform at such low frequencies
+                are inaudible.
+              </p>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-two-thirds">
+                <video poster="" id="2a_iso" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/a/2a_iso.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                Finally, we generate several <strong>variations</strong>, preserving the selected rhythmic pattern:
+              </p>
+            </div>
+            <div class="columns is-multiline is-centered">
+              <div class="column is-half">
+                <video poster="" id="2a_cond_1" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/a/2a_cond_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2a_cond_2" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/a/2a_cond_2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2a_cond_3" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/a/2a_cond_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2a_cond_4" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/a/2a_cond_4.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                The variations evoke the essence of rhythmic pattern, while remaining diverse and musically interesting.
+                For instance, in the second example, the pattern materializes in the synth.
+              </p>
+            </div>
+            <h4 class="title is-4">0 - 0.5 Hz Example</h4>
+            <div class="content has-text-justified">
+              <p>
+                In this example, we select 0.5 - 1 Hz from some guitar arpeggios. Isolating 0-0.5 Hz retains the overall chord progression, which we can use to generate more variations.
+              </p>
+            </div>
+            <div class="columns is-multiline is-centered">
+              <div class="column is-half">
+                <video poster="" id="2c_input" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/c/2c_input.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2c_iso" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/c/2c_iso.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2c_cond_1" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/c/2c_cond_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2c_cond_2" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/c/2c_cond_2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2c_cond_3" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/c/2c_cond_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2c_cond_3" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/c/2c_cond_4.mp4" type="video/mp4">
+                </video>
+              </div>
+            <h4 class="title is-4">1.5 - 2 Hz Example</h4>
+            <div class="content has-text-justified">
+              <p>
+                In this example, we select 1.5 - 2 Hz from the reference, which contains a kick and snare drum pattern.
+              </p>
+            </div>
+            <div class="columns is-multiline is-centered">
+              <div class="column is-half">
+                <video poster="" id="2b_input" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/b/2b_input.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2b_iso" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/b/2b_iso.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2b_cond_1" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/b/2b_cond_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2b_cond_2" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/b/2b_cond_2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2b_cond_3" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/b/2b_cond_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" id="2b_cond_4" controls height="100%" preload="metadata">
+                  <source src="static/videos/2-Conditional/b/2b_cond_4.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
         </div>
