@@ -376,22 +376,18 @@
             <img src="static/images/method.svg" alt="Method Diagram" />
           </div>
         </div>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-centered is-four-fifths">
-            <div class="content has-text-justified">
-              <p>
-                The <strong>Latent Fourier Transform</strong>. We encode audio into a series of latent vectors and
-                take
-                their Fourier
-                transform, resulting in a <em>latent spectrum</em>.
-                During training <span style="color: #B12421">(red)</span>, this spectrum is masked randomly and used
-                to reconstruct the input. During inference <span style="color:#15007E">(blue)</span>, the user
-                specifies
-                a spectral mask, which selects
-                features from the input at specific timescales and conditions a generative process.
-              </p>
-            </div>
-          </div>
+        <div class="content has-text-justified">
+          <p>
+            The <strong>Latent Fourier Transform</strong>. We encode audio into a series of latent vectors and
+            take
+            their Fourier
+            transform, resulting in a <em>latent spectrum</em>.
+            During training <span style="color: #B12421">(red)</span>, this spectrum is masked randomly and used
+            to reconstruct the input. During inference <span style="color:#15007E">(blue)</span>, the user
+            specifies
+            a spectral mask, which selects
+            features from the input at specific timescales and conditions a generative process.
+          </p>
         </div>
       </div>
     </section>
@@ -413,10 +409,11 @@
                 low-pass
                 the song's <strong>waveform</strong>, as done in traditional audio equalization. In the second video
                 (right), we
-                progressively low-pass the latent sequence representing the song. The audible spectrum ranges between 20
+                progressively low-pass the <strong>latent sequence</strong> representing the song. The audible spectrum ranges between 20
                 and 20,000 Hz
                 (representing the limits of human hearing), while the latent spectrum
-                has a lower range (0&ndash;43 Hz). The musical patterns that the latent spectrum captures occur on larger temporal scales than the oscillations in the audio waveform.
+                has a lower range (0&ndash;43 Hz). The musical patterns that the latent spectrum captures occur on
+                larger temporal scales than the oscillations in the audio waveform.
               </p>
             </div>
             <div class="columns is-centered">
@@ -433,7 +430,9 @@
             </div>
             <div class="content has-text-justified">
               <p>
-                Progressively low-passing the latent spectrum has the effect of smoothing the musical patterns in the piece, first smoothing fine details like transients, then smoothing rapid arpeggios, then smoothing larger-scale features like the chord progression.
+                Progressively low-passing the latent spectrum has the effect of smoothing the musical patterns in the
+                piece, first smoothing fine details like transients, then smoothing rapid arpeggios, then smoothing
+                larger-scale features like the chord progression.
               </p>
             </div>
           </div>
@@ -475,7 +474,8 @@
             </div>
             <div class="content has-text-justified">
               <p>
-                We then <strong>zoom in</strong> on a rhythmic pattern in the music between 9&ndash;9.5 Hz in the latent spectrum, to capture rapid drum patterns occurring within that range. 
+                We then <strong>zoom in</strong> on a rhythmic pattern in the music between 9&ndash;9.5 Hz in the latent
+                spectrum, to capture rapid drum patterns occurring within that range.
                 <!-- Note that we are looking at variations between 9 and 9.5 Hz in the
                 <strong>latent</strong> encoding of the music, since variations in the waveform at such low frequencies
                 are inaudible. -->
@@ -517,14 +517,16 @@
             </div>
             <div class="content has-text-justified">
               <p>
-                The variations evoke the essence of the selected rhythmic pattern, while remaining diverse and musically interesting.
+                The variations evoke the essence of the selected rhythmic pattern, while remaining diverse and musically
+                interesting.
                 For instance, in the second example, the pattern materializes in the synthesizer.
               </p>
             </div>
             <h4 class="title is-4">0&ndash;0.5 Hz Example</h4>
             <div class="content has-text-justified">
               <p>
-                In this example, we select 0.5&ndash;1 Hz from some guitar arpeggios. Isolating 0&ndash;0.5 Hz retains the overall
+                In this example, we select 0.5&ndash;1 Hz from some guitar arpeggios. Isolating 0&ndash;0.5 Hz retains
+                the overall
                 chord progression, which we can use to generate more variations.
               </p>
             </div>
@@ -562,7 +564,8 @@
               <h4 class="title is-4">1.5&ndash;2 Hz Example</h4>
               <div class="content has-text-justified">
                 <p>
-                  In this example, we select 1.5&ndash;2 Hz from the reference, which contains an alternating kick and snare drum
+                  In this example, we select 1.5&ndash;2 Hz from the reference, which contains an alternating kick and
+                  snare drum
                   pattern. This rhythmic pattern is replicated in the variations.
                 </p>
               </div>
@@ -612,7 +615,8 @@
             <div class="content has-text-justified">
               <p>
                 We show several qualitative examples for <strong>blending</strong>. Our goal is to capture
-                characteristics from two inputs, and combine them together. We play the first input, and then the latent frequencies we isolate:
+                characteristics from two inputs, and combine them together. We play the first input, and then the latent
+                frequencies we isolate:
               </p>
             </div>
             <div class="columns is-centered">
@@ -660,7 +664,10 @@
             <h4 class="title is-4">Driving a Christmas Song Using Guitar Strumming</h4>
             <div class="content has-text-justified">
               <p>
-                In this example, we combine the large-scale features of a Christmas song with the transient details (high frequencies) of a guitar recording. Higher latent frequencies will capture transients, onsets, and timbral details, while <em>removing</em> aspects like key and chord progression, as we can see in input 2's isolation.
+                In this example, we combine the large-scale features of a Christmas song with the transient details
+                (high frequencies) of a guitar recording. Higher latent frequencies will capture transients, onsets, and
+                timbral details, while <em>removing</em> aspects like key and chord progression, as we can see in input
+                2's isolation.
                 As a result, the guitar recording's transients/onsets are imparted onto the Christmas song's chord
                 progression, creating a timbre-transfer effect where the guitar's strumming drives the Christmas
                 song's chord progression.
@@ -742,7 +749,7 @@
       </div>
     </section>
 
-
+<!-- 
     <section class="section">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
@@ -776,7 +783,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
 
