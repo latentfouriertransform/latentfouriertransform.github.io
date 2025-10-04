@@ -374,13 +374,19 @@
           <div class="column is-full">
             <h2 class="title is-3">Method</h2>
             <img src="static/images/method.svg" alt="Method Diagram" />
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-centered is-four-fifths">
             <div class="content has-text-justified">
               <p>
-                The <strong>Latent Fourier Transform</strong>. We encode audio into a series of latent vectors and take
+                The <strong>Latent Fourier Transform</strong>. We encode audio into a series of latent vectors and
+                take
                 their Fourier
                 transform, resulting in a <em>latent spectrum</em>.
                 During training <span style="color: #B12421">(red)</span> , this spectrum is masked randomly and used
-                to reconstruct the input. During inference <span style="color:#15007E">(blue)</span>, the user specifies
+                to reconstruct the input. During inference <span style="color:#15007E">(blue)</span>, the user
+                specifies
                 a spectral mask, which selects
                 features from the input at specific timescales and conditions a generative process.
               </p>
@@ -390,10 +396,59 @@
       </div>
     </section>
 
+
+    
     <section class="section">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
+            <h3 class="title is-3">Comparing the Audible and Latent Spectra</h3>
+            <h4 class="title is-4">Progressive Low Pass</h4>
+            <div class="content has-text-justified">
+              <p>
+                In this example, we compare the audible and latent spectra. In the first clip (left), we progressively
+                lowpass
+                the audio <strong>waveform</strong>, as done in traditional audio equalization. In the second clip
+                (right), we
+                progressively lowpass the <strong>latent</strong> spectrum, isolating progressively lower and lower
+                frequencies. Observe that while the frequencies in the audio waveform are between 20 and 20,000 Hz
+                (representing the limits of human hearing), the frequencies in the latent spectrum are generally below
+                this, since the patterns that the latent spectrum captures occur on larger temporal scales.
+              </p>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <video poster="" controls height="100%" preload="metadata">
+                  <source src="static/videos/5-Compare/5-audible.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" controls height="100%" preload="metadata">
+                  <source src="static/videos/5-Compare/5-latent.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-2">Examples</h2>
+            <div class="content has-text-justified">
+              <p>
+                Just like a traditional audio equalizer, LatentFT requires <em>intentionally</em> rather than randomly
+                selecting frequencies to boost. For instance, a song of 120 bpm might have interesting patterns at 2 Hz,
+                1 Hz, 4 Hz, and 8 Hz, but a song of a different tempo might require selecting different latent
+                frequencies. Thus, we present demonstrative examples that have been <strong>selected</strong> by the
+                authors. Please use <strong>headphones</strong> or high-quality earbuds.
+              </p>
+            </div>
+
             <h3 class="title is-3">Conditional Generation</h3>
             <h4 class="title is-4">Instructive Example</h4>
             <div class="content has-text-justified">
@@ -404,7 +459,7 @@
               </p>
             </div>
             <div class="columns is-centered">
-              <div class="column is-two-thirds">
+              <div class="column is-half">
                 <video poster="" controls height="100%" preload="metadata">
                   <source src="static/videos/2-Conditional/a/2a_input.mp4" type="video/mp4">
                 </video>
@@ -419,7 +474,7 @@
               </p>
             </div>
             <div class="columns is-centered">
-              <div class="column is-two-thirds">
+              <div class="column is-half">
                 <video poster="" controls height="100%" preload="metadata">
                   <source src="static/videos/2-Conditional/a/2a_iso.mp4" type="video/mp4">
                 </video>
@@ -584,20 +639,27 @@
             </div>
             <div class="content has-text-centered">
               <p>
-                Now, we blend the two together:
+                Now, we blend the two together. Note how the rhythmic pattern from the second input modulates the
+                generation.
               </p>
             </div>
             <div class="columns is-centered">
-              <div class="column is-two-thirds">
+              <div class="column is-half">
                 <video poster="" controls height="100%" preload="metadata">
                   <source src="static/videos/3-Blend/a/3a_blend.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
-            <h4 class="title is-4">Additional Example</h4>
+            <h4 class="title is-4">Driving a Christmas song using Guitar Strumming</h4>
             <div class="content has-text-justified">
               <p>
-                We show another example below.
+                We show another example below. In this example, we extend the display of the Latent Frequency axis to 43
+                Hz, which its upper limit. We find that if we take a large enough band, these higher frequencies will
+                capture the input's transients (onsets) well, while <em>removing</em> aspects like key and chord
+                progression.
+                As a result, the guitar recording's transients/onsets are imparted onto the Christmas song's chord
+                progression, creating a timbre-transfer effect, where the guitar's strumming 'drives' the Christmas
+                song's chord progression.
               </p>
             </div>
 
@@ -626,16 +688,18 @@
               </div>
             </div>
             <div class="columns is-centered">
-              <div class="column is-two-thirds">
+              <div class="column is-half">
                 <video poster="" controls height="100%" preload="metadata">
                   <source src="static/videos/3-Blend/b/3b_blend.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
-            <h4 class="title is-4">Another Example</h4>
+            <h4 class="title is-4">Another Timbre-Transfer-Like Example</h4>
             <div class="content has-text-justified">
               <p>
-                We show a third example below.
+                We show a third example below. Again, we select a larger band of high frequencies from input 2 to
+                capture sharp onsets/transients. We impart these onsets onto input 1's global characteristics, resulting
+                in a timbre-transfer effect, where input 2's onsets 'drives' input 1.
               </p>
             </div>
             <div class="columns is-centered">
@@ -663,7 +727,7 @@
               </div>
             </div>
             <div class="columns is-centered">
-              <div class="column is-two-thirds">
+              <div class="column is-half">
                 <video poster="" controls height="100%" preload="metadata">
                   <source src="static/videos/3-Blend/c/3c_blend.mp4" type="video/mp4">
                 </video>
@@ -673,6 +737,43 @@
         </div>
       </div>
     </section>
+
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h3 class="title is-3">Isolation - Audio Accompanying Figure 4</h3>
+            <div class="content has-text-justified">
+              <p>
+                The previous examples have included attempts to isolate latent frequencies. Here, we
+                provide additional examples accompanying Figure 4 in the paper, where we isolate different frequency ranges.
+              </p>
+              <img src="static/videos/4-Iso/iso_3.png" alt="Spectrograms from Figure 4." style="margin-left:-15px;" />
+              <div class="columns is-centered">
+                <div class="column is-one-third">
+                  <audio controls style="width:100%">
+                    <source src="static/videos/4-Iso/4-input.wav">
+                  </audio>
+                </div>
+                <div class="column is-one-third">
+                  <audio controls style="width:100%">
+                    <source src="static/videos/4-Iso/4-low.wav">
+                  </audio>
+                </div>
+                <div class="column is-one-third">
+                  <audio controls style="width:100%">
+                    <source src="static/videos/4-Iso/4-high.wav">
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
 
 
