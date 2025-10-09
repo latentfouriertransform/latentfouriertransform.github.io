@@ -321,27 +321,32 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <video poster="" autoplay controls muted height="100%" preload="metadata">
+          <video poster="" controls height="100%" preload="metadata">
             <source src="static/videos/1-Teaser/teaser.mp4" type="video/mp4">
           </video>
           <div class="content has-text-justified">
             <p>
-              <strong>Generating Variations</strong>. We show an input music clip, then <strong>isolate</strong> and hear characteristics
+              <strong>Generating Variations</strong>. We show an input music clip, then <strong>isolate</strong> and
+              hear characteristics
               between 0&ndash;0.25 Hz (which captures primarily the chord progression). We use this content to
-              <strong>generate</strong> three variations of our input.
+              <strong>generate</strong> three variations of our input. <span style="color:#0f8251; font-weight:bold;">(Sound
+                  On)</span>
             </p>
           </div>
           <h2 class=" has-text-centered">
           </h2>
         </div>
         <div class="hero-body">
-          <video poster="" autoplay controls muted height="100%" preload="metadata">
+          <video poster="" controls height="100%" preload="metadata">
             <source src="static/videos/1-Teaser/teaser_blend.mp4" type="video/mp4">
           </video>
           <div class="content has-text-justified">
             <p>
-              <strong>Blending</strong>. We show an input music clip, then <strong>isolate</strong> and hear characteristics
-              between 7.5&ndash;8 Hz. We show another input music clip, isolating characteristics between 0&ndash;0.25 Hz. We 
+              <strong>Blending</strong>. We show an input music clip, then isolate and hear characteristics
+              between 7.5&ndash;8 Hz. We show another input music clip, then isolate characteristics between
+              0&ndash;0.25 Hz. Then, we blend the two music clips together, selecting characteristics from 7.5&ndash;8
+              Hz from the first, and 0&ndash;0.25 Hz from the second.
+              <span style="color:#0f8251; font-weight:bold;">(Sound On)</span>
             </p>
           </div>
           <h2 class=" has-text-centered">
@@ -413,7 +418,7 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h3 class="title is-3">Comparing the Audible and Latent Spectra</h3>
-            <h4 class="title is-4">Progressive Low-Pass</h4>
+            <!-- <h4 class="title is-4">Progressive Low-Pass</h4> -->
             <div class="content has-text-justified">
               <p>
                 In this example, we compare the audible spectrum (the Fourier-domain representation of the audio
@@ -423,7 +428,10 @@
                 low-pass
                 the song's <strong>waveform</strong>, as done in traditional audio equalization. In the second video
                 (right), we
-                progressively low-pass the <strong>latent sequence</strong> representing the song. The audible spectrum
+                progressively low-pass the <strong>latent sequence</strong> representing the song. 
+              </p>
+              <p>
+                The audible spectrum
                 ranges between 20
                 and 20,000 Hz
                 (representing the limits of human hearing), while the latent spectrum
@@ -679,10 +687,13 @@
             <h4 class="title is-4">Patterns are Restylized</h4>
             <div class="content has-text-justified">
               <p>
-                Here, we blend patterns from the first input with very low-frequency characteristics (0&ndash;0.25 Hz) from the second input.
+                Here, we blend patterns from the first input with very low-frequency characteristics (0&ndash;0.25 Hz)
+                from the second input.
                 In
                 this example, note that the isolated components are not simply being added together. In the blending,
-                the drum patterns from input 1 have been <strong>restylized</strong> to mix seamlessly with input 2. This is intended, as style is a <strong>global</strong> characteristic, and we are taking the global (0 Hz) characteristics from input 2.
+                the drum patterns from input 1 have been <strong>restylized</strong> to mix seamlessly with input 2.
+                This is intended, as style is a <strong>global</strong> characteristic, and we are taking the global (0
+                Hz) characteristics from input 2.
               </p>
             </div>
             <div class="columns is-centered">
