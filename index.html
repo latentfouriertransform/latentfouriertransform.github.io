@@ -326,7 +326,7 @@
           </video>
           <div class="content has-text-justified">
             <p>
-              Generating Variations. We show an input music clip, then <strong>isolate</strong> and hear characteristics
+              <strong>Generating Variations</strong>. We show an input music clip, then <strong>isolate</strong> and hear characteristics
               between 0&ndash;0.25 Hz (which captures primarily the chord progression). We use this content to
               <strong>generate</strong> three variations of our input.
             </p>
@@ -334,6 +334,20 @@
           <h2 class=" has-text-centered">
           </h2>
         </div>
+        <div class="hero-body">
+          <video poster="" autoplay controls muted height="100%" preload="metadata">
+            <source src="static/videos/1-Teaser/teaser_blend.mp4" type="video/mp4">
+          </video>
+          <div class="content has-text-justified">
+            <p>
+              <strong>Blending</strong>. We show an input music clip, then <strong>isolate</strong> and hear characteristics
+              between 7.5&ndash;8 Hz. We show another input music clip, isolating characteristics between 0&ndash;0.25 Hz. We 
+            </p>
+          </div>
+          <h2 class=" has-text-centered">
+          </h2>
+        </div>
+
       </div>
     </section>
     <!-- End teaser video -->
@@ -409,7 +423,8 @@
                 low-pass
                 the song's <strong>waveform</strong>, as done in traditional audio equalization. In the second video
                 (right), we
-                progressively low-pass the <strong>latent sequence</strong> representing the song. The audible spectrum ranges between 20
+                progressively low-pass the <strong>latent sequence</strong> representing the song. The audible spectrum
+                ranges between 20
                 and 20,000 Hz
                 (representing the limits of human hearing), while the latent spectrum
                 has a lower range (0&ndash;43 Hz). The musical patterns that the latent spectrum captures occur on
@@ -661,6 +676,46 @@
                 </video>
               </div>
             </div>
+            <h4 class="title is-4">Patterns are Restylized</h4>
+            <div class="content has-text-justified">
+              <p>
+                Here, we blend patterns from the first input with very low-frequency characteristics (0&ndash;0.25 Hz) from the second input.
+                In
+                this example, note that the isolated components are not simply being added together. In the blending,
+                the drum patterns from input 1 have been <strong>restylized</strong> to mix seamlessly with input 2. This is intended, as style is a <strong>global</strong> characteristic, and we are taking the global (0 Hz) characteristics from input 2.
+              </p>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <video poster="" controls height="100%" preload="metadata">
+                  <source src="static/videos/3-Blend/d/3d_input_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" controls height="100%" preload="metadata">
+                  <source src="static/videos/3-Blend/d/3d_iso_1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <video poster="" controls height="100%" preload="metadata">
+                  <source src="static/videos/3-Blend/d/3d_input_2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" controls height="100%" preload="metadata">
+                  <source src="static/videos/3-Blend/d/3d_iso_2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <video poster="" controls height="100%" preload="metadata">
+                  <source src="static/videos/3-Blend/d/3d_blend.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
             <h4 class="title is-4">Driving a Christmas Song Using Guitar Strumming</h4>
             <div class="content has-text-justified">
               <p>
@@ -783,7 +838,7 @@
         </div>
       </div>
     </section>
-    
+
 
 
 
