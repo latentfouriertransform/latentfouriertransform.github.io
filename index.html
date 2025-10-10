@@ -329,8 +329,10 @@
               <strong>Generating Variations</strong>. We show an input music clip, then <strong>isolate</strong> and
               hear characteristics
               between 0&ndash;0.25 Hz (which captures primarily the chord progression). We use this content to
-              <strong>generate</strong> three variations of our input. <span style="color:#0f8251; font-weight:bold;">(Sound
-                  On)</span>
+              <strong>generate</strong> three variations of our input. The purple line indicates the latent frequencies
+              retained from the input, and the yellow line indicates how the model is filling in the rest of the latent spectrum.
+              <span style="color:#0f8251; font-weight:bold;">(Sound
+                On)</span>
             </p>
           </div>
           <h2 class=" has-text-centered">
@@ -343,7 +345,7 @@
           <div class="content has-text-justified">
             <p>
               <strong>Blending</strong>. We show an input music clip, then isolate and hear characteristics
-              between 7.5&ndash;8 Hz. We show another input music clip, then isolate characteristics between
+              between 7.5&ndash;8 Hz. We show another input music clip, then isolate and hear characteristics between
               0&ndash;0.25 Hz. Then, we blend the two music clips together, selecting characteristics from 7.5&ndash;8
               Hz from the first, and 0&ndash;0.25 Hz from the second.
               <span style="color:#0f8251; font-weight:bold;">(Sound On)</span>
@@ -399,7 +401,7 @@
           <p>
             The <strong>Latent Fourier Transform</strong>. We encode audio into a series of latent vectors and
             take
-            their Fourier
+            its Fourier
             transform, resulting in a <em>latent spectrum</em>.
             During training <span style="color: #B12421">(red)</span>, this spectrum is masked randomly and used
             to reconstruct the input. During inference <span style="color:#15007E">(blue)</span>, the user
@@ -421,22 +423,23 @@
             <!-- <h4 class="title is-4">Progressive Low-Pass</h4> -->
             <div class="content has-text-justified">
               <p>
-                In this example, we compare the audible spectrum (the Fourier-domain representation of the audio
+                We compare the audible spectrum (the Fourier-domain representation of the audio
                 waveform) and latent spectrum (Fourier-domain representation of the latent sequence). We play a song. In
                 the first video
                 (left), we progressively
                 low-pass
                 the song's <strong>waveform</strong>, as done in traditional audio equalization. In the second video
                 (right), we
-                progressively low-pass the <strong>latent sequence</strong> representing the song. 
+                progressively low-pass the <strong>latent sequence</strong> representing the song.
               </p>
               <p>
                 The audible spectrum
-                ranges between 20
-                and 20,000 Hz
+                ranges from 20&ndash;20,000 Hz
                 (representing the limits of human hearing), while the latent spectrum
                 has a lower range (0&ndash;43 Hz). The musical patterns that the latent spectrum captures occur on
-                larger temporal scales than the oscillations in the audio waveform.
+                larger temporal scales than the oscillations in the audio waveform. The visualizations show which
+                audible or latent
+                frequencies are being retained from the input.
               </p>
             </div>
             <div class="columns is-centered">
@@ -472,11 +475,11 @@
             <div class="content has-text-justified">
               <p>
                 Just like a traditional audio equalizer, LatentFT requires <em>intentionally</em> (rather than randomly)
-                selecting frequencies to boost. For instance, a song of 120 bpm might have interesting patterns at 2 Hz,
+                selecting frequencies to boost. For instance, a song with a tempo of 120 beats-per-minute (bpm) might
+                have interesting patterns at 2 Hz,
                 1 Hz, 4 Hz, and 8 Hz, but a song of a different tempo might require selecting different latent
                 frequencies. Thus, we present demonstrative examples <strong>selected</strong> by the
-                authors. We recommend listening with <strong>headphones</strong> or high-quality earbuds.
-              </p>
+                authors. We recommend listening with <strong>headphones</strong> or high-quality earbuds. </p>
             </div>
 
             <h3 class="title is-3">Conditional Generation</h3>
@@ -542,7 +545,7 @@
               <p>
                 The variations evoke the essence of the selected rhythmic pattern, while remaining diverse and musically
                 interesting.
-                For instance, in the second example, the pattern materializes in the synthesizer.
+                For instance, in the second example, the pattern materializes in the synthesizer and hi-hat pattern.
               </p>
             </div>
             <h4 class="title is-4">0&ndash;0.5 Hz Example</h4>
@@ -691,7 +694,7 @@
                 from the second input.
                 In
                 this example, note that the isolated components are not simply being added together. In the blending,
-                the drum patterns from input 1 have been <strong>restylized</strong> to mix seamlessly with input 2.
+                the drum patterns from input 1 have been <strong>restylized</strong> to <em>mix seamlessly</em> with input 2.
                 This is intended, as style is a <strong>global</strong> characteristic, and we are taking the global (0
                 Hz) characteristics from input 2.
               </p>
