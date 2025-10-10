@@ -330,7 +330,8 @@
               hear characteristics
               between 0&ndash;0.25 Hz (which captures primarily the chord progression). We use this content to
               <strong>generate</strong> three variations of our input. The purple line indicates the latent frequencies
-              retained from the input, and the yellow line indicates how the model is filling in the rest of the latent spectrum.
+              retained from the input, and the yellow line indicates how the model is filling in the rest of the latent
+              spectrum.
               <span style="color:#0f8251; font-weight:bold;">(Sound
                 On)</span>
             </p>
@@ -347,7 +348,9 @@
               <strong>Blending</strong>. We show an input music clip, then isolate and hear characteristics
               between 7.5&ndash;8 Hz. We show another input music clip, then isolate and hear characteristics between
               0&ndash;0.25 Hz. Then, we blend the two music clips together, selecting characteristics from 7.5&ndash;8
-              Hz from the first, and 0&ndash;0.25 Hz from the second.
+              Hz from the first, and 0&ndash;0.25 Hz from the second. In the blending, the isolated components are not
+              simply being added together. The patterns from input 1 have been <strong>restylized</strong> to
+              <em>mix seamlessly</em> with input 2.
               <span style="color:#0f8251; font-weight:bold;">(Sound On)</span>
             </p>
           </div>
@@ -692,41 +695,40 @@
               <p>
                 Here, we blend patterns from the first input with very low-frequency characteristics (0&ndash;0.25 Hz)
                 from the second input.
-                In
-                this example, note that the isolated components are not simply being added together. In the blending,
-                the drum patterns from input 1 have been <strong>restylized</strong> to <em>mix seamlessly</em> with input 2.
-                This is intended, as style is a <strong>global</strong> characteristic, and we are taking the global (0
-                Hz) characteristics from input 2.
+                Note again that in the blending, the synth pattern from input 2 has been <strong>restylized</strong> to <em>mix seamlessly</em> with
+                input 2.
+                <!-- This is intended, as style is a <strong>global</strong> characteristic, and we are taking the global (0
+                Hz) characteristics from input 2. -->
               </p>
             </div>
             <div class="columns is-centered">
               <div class="column is-half">
                 <video poster="" controls height="100%" preload="metadata">
-                  <source src="static/videos/3-Blend/d/3d_input_1.mp4" type="video/mp4">
+                  <source src="static/videos/3-Blend/e/3e_input_1.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="column is-half">
                 <video poster="" controls height="100%" preload="metadata">
-                  <source src="static/videos/3-Blend/d/3d_iso_1.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-            <div class="columns is-centered">
-              <div class="column is-half">
-                <video poster="" controls height="100%" preload="metadata">
-                  <source src="static/videos/3-Blend/d/3d_input_2.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="column is-half">
-                <video poster="" controls height="100%" preload="metadata">
-                  <source src="static/videos/3-Blend/d/3d_iso_2.mp4" type="video/mp4">
+                  <source src="static/videos/3-Blend/e/3e_iso_1.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
             <div class="columns is-centered">
               <div class="column is-half">
                 <video poster="" controls height="100%" preload="metadata">
-                  <source src="static/videos/3-Blend/d/3d_blend.mp4" type="video/mp4">
+                  <source src="static/videos/3-Blend/e/3e_input_2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <video poster="" controls height="100%" preload="metadata">
+                  <source src="static/videos/3-Blend/e/3e_iso_2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <video poster="" controls height="100%" preload="metadata">
+                  <source src="static/videos/3-Blend/e/3e_blend.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
