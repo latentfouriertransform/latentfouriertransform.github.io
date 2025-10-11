@@ -764,3 +764,10 @@ a:focus {
 .table-container {
   overflow-x: auto;
 }
+
+
+
+.works-list ul ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}

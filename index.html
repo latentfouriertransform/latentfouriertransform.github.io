@@ -195,52 +195,39 @@
   </button>
 
   <!-- More Works Dropdown -->
-  <!-- <div class="more-works-container">
+  <div class="more-works-container">
     <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
       <i class="fas fa-flask"></i>
-      More Works
+      Contents
       <i class="fas fa-chevron-down dropdown-arrow"></i>
     </button>
     <div class="more-works-dropdown" id="moreWorksDropdown">
       <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
+        <h4>Table of Contents</h4>
         <button class="close-btn" onclick="toggleMoreWorks()">
           <i class="fas fa-times"></i>
         </button>
       </div>
       <div class="works-list">
-        TODO: Replace with your lab's related works
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            TODO: Replace with actual paper title
-            <h5>Paper Title 1</h5>
-            TODO: Replace with brief description
-            <p>Brief description of the work and its main contribution.</p>
-            TODO: Replace with venue and year
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        TODO: Add more related works or remove extra items
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
+        <ul>
+          <li><a href="#title">Teaser Examples</a></li>
+          <li><a href="#abstract">Abstract</a></li>
+          <li><a href="#method">Method</a></li>
+          <li><a href="#comparison">Comparing Audible and Latent Spectra</a></li>
+          <li><a href="#examples">Examples</a></li>
+          <ul>
+            <li><a href="#cond">Conditional Generation</a></li>
+            <li><a href="#blend">Blending</a></li>
+          </ul>
+          <li><a href="#baselines">Comparisons to Baselines</a></li>
+          <ul>
+            <li><a href="#cond_baselines">Conditional Generation</a></li>
+            <li><a href="#blend_baselines">Blending</a></li>
+          </ul>
+        </ul>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <main id="main-content">
     <section class="hero">
@@ -249,7 +236,7 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <!-- TODO: Replace with your paper title -->
-              <h1 class="title is-1 publication-title">Latent Fourier Transform</h1>
+              <h1 class="title is-1 publication-title" id="title">Latent Fourier Transform</h1>
               <div class="is-size-5 publication-authors">
                 <!-- TODO: Replace with your paper authors and their personal links -->
                 <span class="author-block">
