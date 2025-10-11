@@ -367,7 +367,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
+            <h2 class="title is-3" id="abstract">Abstract</h2>
             <div class="content has-text-justified">
               <p>
                 We introduce the Latent Fourier Transform (LatentFT), a framework that provides novel frequency-domain
@@ -396,7 +396,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-full">
-            <h2 class="title is-3">Method</h2>
+            <h2 class="title is-3" id="method">Method</h2>
             <img src="static/images/method.svg" alt="Method Diagram" />
           </div>
         </div>
@@ -422,7 +422,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h3 class="title is-3">Comparing the Audible and Latent Spectra</h3>
+            <h3 class="title is-3" id="comparison">Comparing the Audible and Latent Spectra</h3>
             <!-- <h4 class="title is-4">Progressive Low-Pass</h4> -->
             <div class="content has-text-justified">
               <p>
@@ -474,7 +474,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-2">Examples</h2>
+            <h2 class="title is-2" id="examples">Examples</h2>
             <div class="content has-text-justified">
               <p>
                 Just like a traditional audio equalizer, LatentFT requires <em>intentionally</em> (rather than randomly)
@@ -485,7 +485,7 @@
                 authors. We recommend listening with <strong>headphones</strong> or high-quality earbuds. </p>
             </div>
 
-            <h3 class="title is-3">Conditional Generation</h3>
+            <h3 class="title is-3" id="cond">Conditional Generation</h3>
             <h4 class="title is-4">Instructive Example</h4>
             <div class="content has-text-justified">
               <p>
@@ -639,7 +639,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h3 class="title is-3">Blending</h3>
+            <h3 class="title is-3" id="blend">Blending</h3>
             <h4 class="title is-4">Instructive Example</h4>
             <div class="content has-text-justified">
               <p>
@@ -693,7 +693,8 @@
             <h4 class="title is-4">Patterns are Restylized</h4>
             <div class="content has-text-justified">
               <p>
-                Here, we blend patterns from the first input with very low-frequency characteristics (0&ndash;0.25 Hz)
+                Here, we blend patterns from the first input with very low-frequency characteristics (0&ndash;0.25
+                Hz)
                 from the second input.
                 Note again that in the blending, the synth pattern from input 2 has been <strong>restylized</strong> to
                 <em>mix seamlessly</em> with
@@ -825,8 +826,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h3 class="title is-3">Comparisons to Baselines</h3>
-            <h4 class="title is-4">Conditional Generation</h4>
+            <h3 class="title is-3" id="baselines">Comparisons to Baselines</h3>
+            <h4 class="title is-4" id="cond_baselines">Conditional Generation</h4>
             <div class="table-container">
               <table class="table is-fullwidth is-striped is-hoverable audio-table">
                 <thead>
@@ -1368,7 +1369,7 @@
                 </tbody>
               </table>
             </div>
-            <h4 class="title is-4">Blending</h4>
+            <h4 class="title is-4" id="blend_baselines">Blending</h4>
             <div class="table-container">
               <table class="table is-fullwidth is-striped is-hoverable">
                 <thead>
