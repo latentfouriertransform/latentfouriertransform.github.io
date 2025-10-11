@@ -695,7 +695,8 @@
               <p>
                 Here, we blend patterns from the first input with very low-frequency characteristics (0&ndash;0.25 Hz)
                 from the second input.
-                Note again that in the blending, the synth pattern from input 2 has been <strong>restylized</strong> to <em>mix seamlessly</em> with
+                Note again that in the blending, the synth pattern from input 2 has been <strong>restylized</strong> to
+                <em>mix seamlessly</em> with
                 input 2.
                 <!-- This is intended, as style is a <strong>global</strong> characteristic, and we are taking the global (0
                 Hz) characteristics from input 2. -->
@@ -819,7 +820,1034 @@
         </div>
       </div>
     </section>
-<!-- 
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h3 class="title is-3">Comparisons to Baselines</h3>
+            <h4 class="title is-4">Conditional Generation</h4>
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable audio-table">
+                <thead>
+                  <tr class="input-row">
+                    <th scope="col" colspan="4" style="text-align:center; vertical-align:middle;">
+                      <div style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
+                        <p>Input: Take 0-0.25 Hz from this:</p>
+                        <audio controls preload="none">
+                          <source src="static/videos/7-Baselines/cond/0/input.wav" type="audio/wav">
+                        </audio>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>System</th>
+                    <th>Variation 1</th>
+                    <th>Variation 2</th>
+                    <th>Variation 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LatentFT</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/ours/cond_0_ours_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/ours/cond_0_ours_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/ours/cond_0_ours_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Guidance</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/guidance/cond_0_guidance_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/guidance/cond_0_guidance_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/guidance/cond_0_guidance_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ILVR</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/ilvr/cond_0_ilvr_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/ilvr/cond_0_ilvr_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/ilvr/cond_0_ilvr_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vampnet</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/vampnet/cond_0_vampnet_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/vampnet/cond_0_vampnet_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/vampnet/cond_0_vampnet_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spectrogram</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/spectrogram/cond_0_spectrogram_a.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/spectrogram/cond_0_spectrogram_b.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/spectrogram/cond_0_spectrogram_c.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DAC</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/dac/cond_0_dac_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/dac/cond_0_dac_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/0/dac/cond_0_dac_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable audio-table">
+                <thead>
+                  <tr class="input-row">
+                    <th scope="col" colspan="4" style="text-align:center; vertical-align:middle;">
+                      <div style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
+                        <p>Input: Take 9-9.5 Hz from this:</p>
+                        <audio controls preload="none">
+                          <source src="static/videos/7-Baselines/cond/1/input.wav" type="audio/wav">
+                        </audio>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>System</th>
+                    <th>Variation 1</th>
+                    <th>Variation 2</th>
+                    <th>Variation 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LatentFT</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/ours/cond_1_ours_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/ours/cond_1_ours_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/ours/cond_1_ours_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Guidance</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/guidance/cond_1_guidance_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/guidance/cond_1_guidance_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/guidance/cond_1_guidance_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ILVR</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/ilvr/cond_1_ilvr_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/ilvr/cond_1_ilvr_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/ilvr/cond_1_ilvr_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vampnet</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/vampnet/cond_1_vampnet_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/vampnet/cond_1_vampnet_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/vampnet/cond_1_vampnet_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spectrogram</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/spectrogram/cond_1_spectrogram_a.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/spectrogram/cond_1_spectrogram_b.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/spectrogram/cond_1_spectrogram_c.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DAC</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/dac/cond_1_dac_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/dac/cond_1_dac_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/1/dac/cond_1_dac_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable audio-table">
+                <thead>
+                  <tr class="input-row">
+                    <th scope="col" colspan="4" style="text-align:center; vertical-align:middle;">
+                      <div style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
+                        <p>Input: Take 0-0.5 Hz from this:</p>
+                        <audio controls preload="none">
+                          <source src="static/videos/7-Baselines/cond/2/input.wav" type="audio/wav">
+                        </audio>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>System</th>
+                    <th>Variation 1</th>
+                    <th>Variation 2</th>
+                    <th>Variation 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LatentFT</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/ours/cond_2_ours_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/ours/cond_2_ours_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/ours/cond_2_ours_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Guidance</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/guidance/cond_2_guidance_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/guidance/cond_2_guidance_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/guidance/cond_2_guidance_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ILVR</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/ilvr/cond_2_ilvr_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/ilvr/cond_2_ilvr_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/ilvr/cond_2_ilvr_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vampnet</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/vampnet/cond_2_vampnet_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/vampnet/cond_2_vampnet_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/vampnet/cond_2_vampnet_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spectrogram</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/spectrogram/cond_2_spectrogram_a.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/spectrogram/cond_2_spectrogram_b.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/spectrogram/cond_2_spectrogram_c.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DAC</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/dac/cond_2_dac_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/dac/cond_2_dac_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/2/dac/cond_2_dac_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable audio-table">
+                <thead>
+                  <tr class="input-row">
+                    <th scope="col" colspan="4" style="text-align:center; vertical-align:middle;">
+                      <div style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
+                        <p>Input: Take 1.5-2 Hz from this:</p>
+                        <audio controls preload="none">
+                          <source src="static/videos/7-Baselines/cond/3/input.wav" type="audio/wav">
+                        </audio>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>System</th>
+                    <th>Variation 1</th>
+                    <th>Variation 2</th>
+                    <th>Variation 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LatentFT</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/ours/cond_3_ours_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/ours/cond_3_ours_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/ours/cond_3_ours_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Guidance</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/guidance/cond_3_guidance_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/guidance/cond_3_guidance_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/guidance/cond_3_guidance_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ILVR</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/ilvr/cond_3_ilvr_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/ilvr/cond_3_ilvr_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/ilvr/cond_3_ilvr_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vampnet</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/vampnet/cond_3_vampnet_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/vampnet/cond_3_vampnet_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/vampnet/cond_3_vampnet_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spectrogram</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/spectrogram/cond_3_spectrogram_a.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/spectrogram/cond_3_spectrogram_b.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/spectrogram/cond_3_spectrogram_c.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DAC</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/dac/cond_3_dac_a.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/dac/cond_3_dac_b.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/cond/3/dac/cond_3_dac_c.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h4 class="title is-4">Blending</h4>
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                  <tr class="input-row">
+                    <th scope="col" colspan="4" style="text-align:center; vertical-align:middle;">
+                      <div
+                        style="display:flex; flex-direction:row; justify-content:center; align-items:center; gap:2rem; flex-wrap:wrap;">
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 1: Take 7.5-8 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/0/input_1.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 2: Take 0-0.25 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/0/input_2.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>System</th>
+                    <th>Blended</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LatentFT</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/0/ours/blend_0_ours.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cross Synthesis</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/0/cross/blend_0_cross.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Guidance</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/0/guidance/blend_0_guidance.wav" type="audio/wav">
+                      </audio>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">ILVR</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/0/ilvr/blend_0_ilvr.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vampnet</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/0/vampnet/blend_0_vampnet.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spectrogram</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/0/spectrogram/blend_0_spectrogram.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DAC</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/0/dac/blend_0_dac.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+
+
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                  <tr class="input-row">
+                    <th scope="col" colspan="4" style="text-align:center; vertical-align:middle;">
+                      <div
+                        style="display:flex; flex-direction:row; justify-content:center; align-items:center; gap:2rem; flex-wrap:wrap;">
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 1: Take 3.5-4.5 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/1/input_1.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 2: Take 0-1 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/1/input_2.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>System</th>
+                    <th>Blended</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LatentFT</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/1/ours/blend_1_ours.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cross Synthesis</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/1/cross/blend_1_cross.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Guidance</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/1/guidance/blend_1_guidance.wav" type="audio/wav">
+                      </audio>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">ILVR</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/1/ilvr/blend_1_ilvr.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vampnet</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/1/vampnet/blend_1_vampnet.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spectrogram</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/1/spectrogram/blend_1_spectrogram.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DAC</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/1/dac/blend_1_dac.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+
+
+
+
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                  <tr class="input-row">
+                    <th scope="col" colspan="4" style="text-align:center; vertical-align:middle;">
+                      <div
+                        style="display:flex; flex-direction:row; justify-content:center; align-items:center; gap:2rem; flex-wrap:wrap;">
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 1: Take 0-0.25 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/2/input_1.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 2: Take 4.6-5 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/2/input_2.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>System</th>
+                    <th>Blended</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LatentFT</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/2/ours/blend_2_ours.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cross Synthesis</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/2/cross/blend_2_cross.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Guidance</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/2/guidance/blend_2_guidance.wav" type="audio/wav">
+                      </audio>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">ILVR</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/2/ilvr/blend_2_ilvr.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vampnet</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/2/vampnet/blend_2_vampnet.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spectrogram</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/2/spectrogram/blend_2_spectrogram.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DAC</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/2/dac/blend_2_dac.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+
+
+
+
+
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                  <tr class="input-row">
+                    <th scope="col" colspan="4" style="text-align:center; vertical-align:middle;">
+                      <div
+                        style="display:flex; flex-direction:row; justify-content:center; align-items:center; gap:2rem; flex-wrap:wrap;">
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 1: Take 0-1 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/3/input_1.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 2: Take 12-18 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/3/input_2.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>System</th>
+                    <th>Blended</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LatentFT</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/3/ours/blend_3_ours.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cross Synthesis</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/3/cross/blend_3_cross.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Guidance</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/3/guidance/blend_3_guidance.wav" type="audio/wav">
+                      </audio>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">ILVR</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/3/ilvr/blend_3_ilvr.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vampnet</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/3/vampnet/blend_3_vampnet.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spectrogram</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/3/spectrogram/blend_3_spectrogram.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DAC</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/3/dac/blend_3_dac.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                  <tr class="input-row">
+                    <th scope="col" colspan="4" style="text-align:center; vertical-align:middle;">
+                      <div
+                        style="display:flex; flex-direction:row; justify-content:center; align-items:center; gap:2rem; flex-wrap:wrap;">
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 1: Take 0-0.5 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/4/input_1.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                        <div style="display:flex; flex-direction: column; align-items:center; gap:0.7rem;">
+                          <p>Input 2: Take 20-40 Hz from this:</p>
+                          <audio controls preload="none">
+                            <source src="static/videos/7-Baselines/blend/4/input_2.wav" type="audio/wav">
+                          </audio>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>System</th>
+                    <th>Blended</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LatentFT</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/4/ours/blend_4_ours.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cross Synthesis</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/4/cross/blend_4_cross.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Guidance</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/4/guidance/blend_4_guidance.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ILVR</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/4/ilvr/blend_4_ilvr.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Vampnet</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/4/vampnet/blend_4_vampnet.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Spectrogram</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/4/spectrogram/blend_4_spectrogram.wav"
+                          type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DAC</th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/7-Baselines/blend/4/dac/blend_4_dac.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 
     <section class="section">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
