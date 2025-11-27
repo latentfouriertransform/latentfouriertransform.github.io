@@ -2218,7 +2218,7 @@
                       </audio>
                     </td>
                   </tr>
-                  <tr>
+                  <!-- <tr>
                     <th scope="row">
                       <audio controls preload="none">
                         <source src="static/videos/11-Styles/Maestro/maestro_5_input.wav" type="audio/wav">
@@ -2305,7 +2305,7 @@
                         <source src="static/videos/11-Styles/Maestro/maestro_7_0.0626_0.1251.wav" type="audio/wav">
                       </audio>
                     </td>
-                  </tr>
+                  </tr>  -->
                 </tbody>
               </table>
             </div>
@@ -2326,24 +2326,14 @@
               <table class="table is-fullwidth is-striped is-hoverable audio-table">
                 <thead>
                   <tr>
-                    <th>Input (Cond. on 0 - 0.1 Hz)</th>
+                    <th>Band we Condition On</th>
+                    <th>Input</th>
                     <th>Variation</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">
-                      <audio controls preload="none">
-                        <source src="static/videos/12-Failure/cond/failure_input_1.wav" type="audio/wav">
-                      </audio>
-                    </th>
-                    <td>
-                      <audio controls preload="none">
-                        <source src="static/videos/12-Failure/cond/failure_out_1.wav" type="audio/wav">
-                      </audio>
-                    </td>
-                  </tr>
-                  <tr>
+                    <th scope="row">11-12 Hz</th>
                     <th scope="row">
                       <audio controls preload="none">
                         <source src="static/videos/12-Failure/cond/failure_input_2.wav" type="audio/wav">
@@ -2355,6 +2345,19 @@
                       </audio>
                     </td>
                   </tr>
+                  <tr>
+                    <th scope="row">0-0.1 Hz</th>
+                    <th scope="row">
+                      <audio controls preload="none">
+                        <source src="static/videos/12-Failure/cond/failure_input_1.wav" type="audio/wav">
+                      </audio>
+                    </th>
+                    <td>
+                      <audio controls preload="none">
+                        <source src="static/videos/12-Failure/cond/failure_out_1.wav" type="audio/wav">
+                      </audio>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -2363,13 +2366,17 @@
               <table class="table is-fullwidth is-striped is-hoverable audio-table">
                 <thead>
                   <tr>
-                    <th>Input 1 (Cond. on 0 - 0.5 Hz)</th>
-                    <th>Input 2 (Cond. on 0 - 0.5 Hz)</th>
+                    <th>Selected Band for Input 1</th>
+                    <th>Selected Band for Input 2</th>
+                    <th>Input 1</th>
+                    <th>Input 2</th>
                     <th>Blend</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <th scope="row">0-0.25 Hz</th>
+                    <th scope="row">0-0.25 Hz</th>
                     <th scope="row">
                       <audio controls preload="none">
                         <source src="static/videos/12-Failure/blend/failure_blend_first_input.wav" type="audio/wav">
@@ -2387,6 +2394,8 @@
                     </td>
                   </tr>
                   <tr>
+                    <th scope="row">0-0.5 Hz</th>
+                    <th scope="row">0.5-1 Hz</th>
                     <th scope="row">
                       <audio controls preload="none">
                         <source src="static/videos/12-Failure/blend/failure_blend_second_input.wav" type="audio/wav">
